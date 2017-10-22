@@ -22,7 +22,7 @@
 											<li><a class="hvr-bounce-to-bottom" href="cliente.php">Cliente</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="mascota.php">Mascota</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="proveedores.php">Proveedor</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="servicios2.php">Tipo Servicios</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="tipo_servicios.php">Tipo Servicios</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="servicios.php">Servicios</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="compras.php">Productos</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="pantallas.php">Pantallas</a></li>
