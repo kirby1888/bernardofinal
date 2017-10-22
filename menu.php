@@ -27,6 +27,7 @@
 												
 	                  <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administración<spa class="caret"></span></a>
 													<ul class="dropdown-menu">
+								            
 											<li><a class="hvr-bounce-to-bottom" href="cliente.php">Cliente</a></li>
 											<li><a class="hvr-bounce-to-bottom" href="mascota.php">Mascota</a></li>
                                              <li><a class="hvr-bounce-to-bottom" href="servicios.php">Servicios</a></li>
@@ -38,7 +39,7 @@
 			         <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Transacciones<span class="caret"></span></a>
 													<ul class="dropdown-menu">
 											<li><a class="hvr-bounce-to-bottom" href="facturas.php">Facturas</a></li>
-											<li><a class="hvr-bounce-to-bottom" href="orden_com.php">Compras</a></li>
+											<li><a class="hvr-bounce-to-bottom" href="compras.php">Compras</a></li>
 											<li><a class="hvr-bounce-to-bottom" href="proveedores.php">Proveedor</a></li>
 											<li><a class="hvr-bounce-to-bottom" href="productos.php">Productos</a></li>
 													</ul>
