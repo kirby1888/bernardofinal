@@ -56,7 +56,7 @@
 	  <div  class="modal-dialog modal-lg-9" role="d class="modal-dialog modal-lg"t">
 		<div class="modal-content">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<button type="button" class="close" data-dismiss="modal"  onClick="location.reload();" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i>Transaccion de Inventario</h4>
 		   </div>
 		  <div class="modal-body">
@@ -183,7 +183,7 @@
             
 
 		   <div class="modal-footer">
-			<button title="Cerrar ventana" type="submit"  class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button title="Cerrar ventana" type="submit"  class="btn btn-default" onClick="location.reload();" data-dismiss="modal">Cerrar</button>
 			<button title="Guardar Datos" type="submit" class="btn btn-primary" name="actualizar_datos" id="actualizar_datos">Guardar datos</button>
 		  </div>
 		  </center>
