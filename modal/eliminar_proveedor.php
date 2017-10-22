@@ -1,6 +1,6 @@
 
 	<!-- Modal -->
-	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" onClick="location.reload();" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -19,7 +19,7 @@
 			  </div>
 	
 		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button type="button" class="btn btn-default" onClick="location.reload();" data-dismiss="modal">Cerrar</button>
 			<button type="submit" class="btn btn-danger" id="actualizar_datos3">Eliminar Proveedor</button>
 		  </div>
 		  </form>
