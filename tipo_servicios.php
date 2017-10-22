@@ -78,8 +78,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 			<div class="panel-body">
 			<?php
-			include("modal/registro_servicio.php");
-			 include("modal/editar_servicios.php");
+			include("modal/registro_tipo_servicio.php");
+			 include("modal/editar_tipo_servicios.php");
                 ?>
 			<form class="form-horizontal" role="form" id="datos_cotizacion">
 				
@@ -90,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
               <?php          
                 
-                include("modal/eliminar_servicio.php");
+                include("modal/eliminar_tipo_servicio.php");
 			    
 			?>
 	</div>
@@ -136,7 +136,7 @@ $( "#editar_password" ).submit(function( event ) {
  var parametros = $(this).serialize();
 	 $.ajax({
 			type: "POST",
-			url: "ajax/eliminar_servicio.php",
+			url: "ajax/eliminar_tipo_servicio.php",
 			data: parametros,
 			 beforeSend: function(objeto){
 				$("#resultados_ajax3").html("Mensaje: Cargando...");
@@ -157,7 +157,7 @@ $( "#editar_usuario" ).submit(function( event ) {
  var parametros = $(this).serialize();
 	 $.ajax({
 			type: "POST",
-			url: "ajax/editar_servicio.php",
+			url: "ajax/editar_tipo_servicio.php",
 			data: parametros,
 			 beforeSend: function(objeto){
 				$("#resultados_ajax2").html("Mensaje: Cargando...");
@@ -177,7 +177,7 @@ $( "#editar_usuario" ).submit(function( event ) {
  var parametros = $(this).serialize();
 	 $.ajax({
 			type: "POST",
-			url: "ajax/nuevo_servicio.php",
+			url: "ajax/nuevo_tipo_servicio.php",
 			data: parametros,
 			 beforeSend: function(objeto){
 				$("#resultados_ajax").html("Mensaje: Cargando...");
@@ -199,7 +199,7 @@ $( "#editar_usuario" ).submit(function( event ) {
 		
 			$("#loader").fadeIn('slow');
 			$.ajax({
-				url:'ajax/buscar_servicios.php',
+				url:'ajax/buscar_tipo_servicios.php',
 				 beforeSend: function(objeto){
 				 $('#loader').html('<img src="./img/ajax-loader.gif"> Cargando...');
 			  },
