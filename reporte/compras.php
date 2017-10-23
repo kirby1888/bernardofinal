@@ -27,39 +27,42 @@ $pdf->Cell(50, 10, 'hoy: '.date('d-m-Y').'', 0);
 $pdf->Ln(15);
 $pdf->SetFont('Arial', 'B', 11);
 $pdf->Cell(70, 8, '', 0);
-$pdf->Cell(100, 8, 'Listado de compras Registradas', 0);
+$pdf->Cell(100, 8, 'Listado de compras/salidas Registradas', 0);
 $pdf->Ln(10);
 $pdf->Cell(60, 8, '', 0);
 $pdf->Cell(60, 8, 'Desde: '.$verDesde.' hasta: '.$verHasta, 8);
 $pdf->Ln(23);
 $pdf->SetFont('Arial', 'B', 8);
 $pdf->Cell(10, 8, 'Id', 0);
-$pdf->Cell(30, 8, 'Codigo', 0);
-$pdf->Cell(30, 8, 'Nombre ', 0);
-$pdf->Cell(25, 8, 'Precio', 0);
-$pdf->Cell(25, 8, 'Canctidad', 0);
+$pdf->Cell(30, 8, 'Transaccion', 0);
+$pdf->Cell(20, 8, 'Fecha ', 0);
+$pdf->Cell(20, 8, 'Codigo', 0);
+$pdf->Cell(25, 8, 'Producto', 0);
 $pdf->Cell(25, 8, 'Tipo', 0);
-$pdf->Cell(25, 8, 'Estatus', 0);
-$pdf->Cell(25, 8, 'Fecha_creacion', 0);
+$pdf->Cell(25, 8, 'Unidad', 0);
+$pdf->Cell(25, 8, 'Cantidad', 0);
+$pdf->Cell(25, 8, 'Stock', 0);
+
 
 $pdf->Ln(8);
 $pdf->SetFont('Arial', '', 8);
 //CONSULTA
-$productos = mysqli_query($mysqli,"SELECT id_producto, codigo_producto, nombre_producto, precio_producto, cant, tipo, status_producto, date_added FROM products WHERE date_added BETWEEN '$desde' AND '$hasta' order by id_producto ");
+$productos = mysqli_query($mysqli,"SELECT a.tipo_transaccion,a.no,a.id_proveedor, a.codigo_transaccion,a.fecha,a.codigo,a.stock,a.numero,b.codigo_producto,b.nombre_producto,b.unidad FROM transaccion_medicamentos as a INNER JOIN products as b ON a.codigo=b.codigo_producto WHERE a.fecha BETWEEN '$desde' AND '$hasta' order by a.no ");
 $item = 0;
 $totaluni = 0;
 $totaldis = 0;
 while($productos2 = mysqli_fetch_array($productos)){
 	$item = $item+1;
-	$pdf->Cell(10, 8, $productos2['id_producto'], 0);
-	$pdf->Cell(30, 8, $productos2['codigo_producto'], 0);
-	$pdf->Cell(30, 8, $productos2['nombre_producto'], 0);
-	$pdf->Cell(25, 8, $productos2['precio_producto'], 0);
-    $pdf->Cell(25, 8, $productos2['cant'], 0);
-    $pdf->Cell(25, 8, $productos2['tipo'], 0);
-    $pdf->Cell(25, 8, $productos2['status_producto'], 0);	
-	$pdf->Cell(25, 8, date('d/m/Y', strtotime($productos2['date_added'])), 0);
-	$pdf->Ln(8);
+	$pdf->Cell(10, 8, $productos2['no'], 0);
+	$pdf->Cell(30, 8, $productos2['codigo_transaccion'], 0);
+	$pdf->Cell(20, 8, $productos2['fecha'], 0);
+	$pdf->Cell(20, 8, $productos2['codigo'], 0);
+    $pdf->Cell(25, 8, $productos2['nombre_producto'], 0);
+    $pdf->Cell(25, 8, $productos2['tipo_transaccion'], 0);
+    $pdf->Cell(25, 8, $productos2['unidad'], 0);
+          $pdf->Cell(25, 8, $productos2['numero'], 0);
+      $pdf->Cell(25, 8, $productos2['stock'], 0);
+	
 }
 $pdf->SetFont('Arial', 'B', 8);
 $pdf->Cell(104,8,'',0);

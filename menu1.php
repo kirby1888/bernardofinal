@@ -20,11 +20,50 @@
 											<li><a class="hvr-bounce-to-bottom" href="usuarios.php">Usuario</a></li>
 											<li><a class="hvr-bounce-to-bottom" href="parametros.php">Parametros</a></li>
 											<li><a class="hvr-bounce-to-bottom" href="cliente.php">Cliente</a></li>
+<<<<<<< HEAD
                                             <li><a class="hvr-bounce-to-bottom" href="mascota.php">Mascota</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="proveedores.php">Proveedor</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="tipo_servicios.php">Tipo Servicios</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="servicios.php">Servicios</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="compras.php">Productos</a></li>
+=======
+											<li><a class="hvr-bounce-to-bottom" href="mascota.php">Mascota</a></li>
+                                             <li><a class="hvr-bounce-to-bottom" href="servicios.php">Servicios</a></li>
+                                             <li><a class="hvr-bounce-to-bottom" href="tipo_servicios.php">Tipo Servicios</a></li>
+                                             <li><a class="hvr-bounce-to-bottom" href="parametros.php">Parametros</a></li>
+													</ul>
+												</li>
+                                    
+                                     <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Transacciones<span class="caret"></span></a>
+													<ul class="dropdown-menu">
+											<li><a class="hvr-bounce-to-bottom" href="facturas.php">Facturas</a></li>
+											<li><a class="hvr-bounce-to-bottom" href="orden_com.php">Compras</a></li>
+											<li><a class="hvr-bounce-to-bottom" href="proveedores.php">Proveedor</a></li>
+											<li><a class="hvr-bounce-to-bottom" href="productos.php">Productos</a></li>
+													</ul>
+												</li>
+                                    
+                                     <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atenciones<span class="caret"></span></a>
+													<ul class="dropdown-menu">
+											<li><a class="hvr-bounce-to-bottom" href="calendar.php">Calendario</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="consultas.php">Consultas</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="atenciones.php">PETuqueria</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="vacunas.php">Vacunas</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="control_vacunas.php">Control Vacunas</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="historial.php">Historial Médico</a></li>
+                                                         <li><a class="hvr-bounce-to-bottom" href="control_recetas.php">Recetas</a></li>    
+													</ul>
+												</li>
+                                    
+                                    
+
+                                     <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seguridad<span class="caret"></span></a>
+													<ul class="dropdown-menu">
+																				
+											<li><a class="hvr-bounce-to-bottom" href="usuarios.php">Usuarios</a></li>							
+										    <li><a class="hvr-bounce-to-bottom" href="roles.php">Roles</a></li>                                               
+                                            <li><a class="hvr-bounce-to-bottom" href="roles_objeto.php">Roles Objetos</a></li>
+>>>>>>> master
                                             <li><a class="hvr-bounce-to-bottom" href="pantallas.php">Pantallas</a></li>
                                                  <li><a class="hvr-bounce-to-bottom" href="vacunas.php">Vacunas</a></li>
 										</ul>

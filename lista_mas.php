@@ -60,11 +60,8 @@ $nombre=getCliente("nom_cliente","id_cliente",$user_id);
        <div class="panel-heading">
        
        <div class="btn-group pull-left">
-       	<li><a href='cliente.php'></a></li>
+         <p> <a href="cliente.php">Regresar</a></p>
 
-<span class="glyphicon glyphicon-share"/>
-REGRESAR
-</button>
 </div>
 <h4>
 <span class="glyphicon glyphicon"/>

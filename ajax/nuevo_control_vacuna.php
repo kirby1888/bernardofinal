@@ -12,8 +12,6 @@
 			$errors[] = "Cantidad aplicada vacia";
 		} else if (empty($_POST['descripcion'])){
 			$errors[] = "Descripcion vacia";
-		} else if (empty($_POST['proxima'])){
-			$errors[] = "No ingreso ninguna fecha";
 		} 
 		/* Connect To Database*/
 		require_once ("../config/db.php");//Contiene las variables de configuracion para conectar a la base de datos
@@ -30,7 +28,7 @@
               $descripcion=strtoupper($descripcion);
 		
 		
-		$sql="INSERT INTO tbl_vacunas(id_tipovacuna,id_mascota,ccml,descripcion,proxima) VALUES ('$vacuna','$nombre','$ccml','$descripcion','$proxima')";
+		$sql="INSERT INTO tbl_vacunas(id_tipovacuna,id_mascota,ccml,descripcion_vac,proxima) VALUES ('$vacuna','$nombre','$ccml','$descripcion','$proxima')";
 		$query_new_insert = mysqli_query($con,$sql);
 			if ($query_new_insert){
 				$messages[] = "El registro ha sido ingresado satisfactoriamente.";

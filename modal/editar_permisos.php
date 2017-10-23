@@ -4,7 +4,11 @@
 	  <div class="modal-dialog" role="document">
 		<div class="modal-content">
 		  <div class="modal-header">
+<<<<<<< HEAD
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+=======
+			<button type="button" onClick="location.reload();"   class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+>>>>>>> master
 			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i>EDITAR PERMISOS</h4>
 		  </div>
 		  <div class="modal-body">
@@ -65,7 +69,7 @@
 	
 		  
 		  <div class="modal-footer">
-			<button title="Cerrar Ventana" type="button" class="btn btn-default" onclick="location.reload()" data-dismiss="modal" >Cerrar</button>
+			<button title="Cerrar Ventana" type="button" class="btn btn-default" data-dismiss="modal" onClick="location.reload();" >Cerrar</button>
 			<button title="Cerrar Ventana" type="submit" class="btn btn-primary"  id="actualizar_datos" >Actualizar Datos</button>
 		  </div>
 		  </form>

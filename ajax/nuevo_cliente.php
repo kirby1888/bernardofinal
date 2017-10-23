@@ -39,7 +39,7 @@ require '../funcs/funcs.php';
                     // if user has been added successfully
                 if ($resultado) {                        
                    
-                        $messages[] = "La cuenta ha sido creada con éxito.";
+                        $messages[] = "La registro creado con éxito.";
                 }
                     }else{
                        $errors[] = "El formato del correo es invalido,  ==>> correo@ejemplo.com."; 

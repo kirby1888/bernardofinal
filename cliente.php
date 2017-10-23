@@ -11,7 +11,7 @@ $sql = "Select id_usuario, nombre_usuario from tbl_usuario WHERE id_usuario = '$
 $result = $mysqli->query($sql);
 $row = $result->fetch_assoc();   
 	
-	$insertar=getPer('permiso_insercion',$rol,'1');
+	$insertar=getPer('permiso_insercion',$rol,'3');
 	
 echo $insertar;
 		$objeto="pantalla usuarios";
@@ -209,7 +209,7 @@ $( "#editar_password" ).submit(function( event ) {
  var parametros = $(this).serialize();
 	 $.ajax({
 			type: "POST",
-			url: "ajax/editar_password.php",
+			url: "ajax/eliminar_cliente.php",
 			data: parametros,
 			 beforeSend: function(objeto){
 				$("#resultados_ajax3").html("Mensaje: Cargando...");
@@ -233,7 +233,7 @@ $( "#editar_password" ).submit(function( event ) {
 		
 			$("#loader").fadeIn('slow');
 			$.ajax({
-				url:'ajax/buscar.php',
+				url:'ajax/buscar_cliente.php',
 				 beforeSend: function(objeto){
 				 $('#loader').html('<img src="./img/ajax-loader.gif"> Cargando...');
 			  },

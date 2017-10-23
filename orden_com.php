@@ -1,11 +1,30 @@
 <?php
 
-
+session_start();
 require 'funcs/conexion.php';
 require 'funcs/funcs.php';
 
-
+if(($_SESSION['id_usuario'])){
+ $idUsuario = $_SESSION['id_usuario'];
+    $rol = $_SESSION['id_rol'];
+$sql = "Select id_usuario, nombre_usuario from tbl_usuario WHERE id_usuario = '$idUsuario'";
+$result = $mysqli->query($sql);
+$row = $result->fetch_assoc();   
+	
+	$insertar=getPer('permiso_insercion',$rol,'12');
+	
+echo $insertar;
+		$objeto="pantalla usuarios";
+		$accion="INGRESO";
+		$descripcion="ingreso a pantalla usuarios";
+		
+		$bita=grabarBitacora($idUsuario,$objeto,$accion,$descripcion);
+			
+}else{
+	header ("Location: index.php");
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +84,11 @@ ORDEN DE COMPRA
 		<div class="panel panel-success">
 		<div class="panel-heading">
 		    <div class="btn-group pull-right">
-				<button type='button' class="btn btn-success" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus" ></span> Nueva Compra</button>
+                
+                 <?php
+			if ($insertar==1){?> 
+				<button type='button' class="btn btn-success" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus" ></span> Compra/salida</button>
+                <?php } ?>
 			</div>
 			<h4><i class='glyphicon glyphicon-search'></i> Buscar Compra</h4>
 		</div>			
@@ -226,7 +249,7 @@ $( "#editar_password" ).submit(function( event ) {
 $('#bd-desde').on('change', function(){
 		var desde = $('#bd-desde').val();
 		var hasta = $('#bd-hasta').val();
-		var url = 'ajax/buscar_usuario_fecha.php';
+		var url = 'ajax/buscar_orden_fecha.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -244,7 +267,7 @@ $('#bd-desde').on('change', function(){
 	  $('#bd-hasta').on('change', function(){
 		var desde = $('#bd-desde').val();
 		var hasta = $('#bd-hasta').val();
-		var url = 'ajax/buscar_usuario_fecha.php';
+		var url = 'ajax/buscar_orden_fecha.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -262,7 +285,7 @@ $('#bd-desde').on('change', function(){
 function reportePDF(){
 	var desde = $('#bd-desde').val();
 	var hasta = $('#bd-hasta').val();
-	window.open('reporte/usuario.php?desde='+desde+'&hasta='+hasta);
+	window.open('reporte/compras.php?desde='+desde+'&hasta='+hasta);
 }
 
 

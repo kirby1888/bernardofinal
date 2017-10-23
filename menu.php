@@ -25,7 +25,7 @@
 											<ul class="nav navbar-nav">
 												<li><a class="active" href="principal.php">Inicio</a></li>
 												
-	                  <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administración<spa class="caret"></span></a>
+	                  <li class=""><a href="" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administración<spa class="caret"></span></a>
 													<ul class="dropdown-menu">
 											<li><a class="hvr-bounce-to-bottom" href="cliente.php">Cliente</a></li>
 											<li><a class="hvr-bounce-to-bottom" href="mascota.php">Mascota</a></li>
@@ -35,7 +35,7 @@
 													</ul>
 												</li>											
 
-			         <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Transacciones<span class="caret"></span></a>
+			         <li class=""><a href="" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Transacciones<span class="caret"></span></a>
 													<ul class="dropdown-menu">
 											<li><a class="hvr-bounce-to-bottom" href="facturas.php">Facturas</a></li>
 											<li><a class="hvr-bounce-to-bottom" href="compras.php">Compras</a></li>
@@ -44,20 +44,26 @@
 													</ul>
 												</li>
 
-			        <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atenciones<span class="caret"></span></a>
+			        <li class=""><a href="" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Atenciones<span class="caret"></span></a>
 													<ul class="dropdown-menu">
 											<li><a class="hvr-bounce-to-bottom" href="calendar.php">Calendario</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="consultas.php">Consultas</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="peluqueria.php">PETuqueria</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="atenciones.php">PETuqueria</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="vacunas.php">Vacunas</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="control_vacunas.php">Control Vacunas</a></li>
+<<<<<<< HEAD
                                             <li><a class="hvr-bounce-to-bottom" href="historial.php">Historial Médico</a></li>
+=======
+                                            <li><a class="hvr-bounce-to-bottom" href="control_consulta.php">Historial Médico</a></li>
+                                                <li><a class="hvr-bounce-to-bottom" href="control_recetas.php">Recetas</a></li>                
+                                                        
+>>>>>>> master
 													</ul>
 												</li>
 
 
 
-			        <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seguridad<span class="caret"></span></a>
+			        <li class=""><a href="" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seguridad<span class="caret"></span></a>
 													<ul class="dropdown-menu">
 																				
 											<li><a class="hvr-bounce-to-bottom" href="usuarios.php">Usuarios</a></li>							

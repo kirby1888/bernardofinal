@@ -9,8 +9,8 @@ if(($_SESSION['id_usuario'])){
  $idUsuario = $_SESSION['id_usuario'];
     $rol = $_SESSION['id_rol'];
   
-	$eliminar=getPer('permiso_eliminacion',$rol,'1');
-	$actualizar=getPer('permiso_actualizacion',$rol,'1');
+	$eliminar=getPer('permiso_eliminacion',$rol,'3');
+	$actualizar=getPer('permiso_actualizacion',$rol,'3');
 
 	
 	

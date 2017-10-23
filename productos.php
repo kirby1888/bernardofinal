@@ -11,7 +11,7 @@ $sql = "Select id_usuario, nombre_usuario from tbl_usuario WHERE id_usuario = '$
 $result = $mysqli->query($sql);
 $row = $result->fetch_assoc();   
 	
-	$insertar=getPer('permiso_insercion',$rol,'11');
+	$insertar=getPer('permiso_insercion',$rol,'8');
 	
 echo $insertar;
 		$objeto="pantalla usuarios";
@@ -87,11 +87,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <?php
 			if ($insertar==1){?> 
 		    <div class="btn-group pull-right">
-				<button type='button' class="btn btn-success" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus" ></span> Nueva Compra</button>
+				<button type='button' class="btn btn-success" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus" ></span> Nuevo Producto</button>
 			</div>
 			<?php } ?>
 			
-			<h4><i class='glyphicon glyphicon-search'></i> Buscar Compra</h4>
+			<h4><i class='glyphicon glyphicon-search'></i> Buscar Productos</h4>
 		</div>			
 			<div class="panel">
 			

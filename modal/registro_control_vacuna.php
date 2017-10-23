@@ -71,7 +71,7 @@
 				<div class="col-sm-8">
 			  	 <div class="input-group">
 			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-				  <input  type="date" class="form-control" id="proxima" name="proxima" placeholder="Fecha de la proxima vacuna"   title="Fecha de  la proxima vacuna" maxlength="20" autocomplete="off" required>
+				  <input  type="date" class="form-control" id="proxima" name="proxima" placeholder="Fecha de la proxima vacuna"   title="Fecha de  la proxima vacuna" maxlength="20" autocomplete="off" >
 				</div> 
 			  </div>
 			  </div>

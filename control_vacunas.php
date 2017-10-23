@@ -245,11 +245,11 @@ $( "#editar_usuario" ).submit(function( event ) {
 
 		function obtener_datos(id,nombre,vacuna,ccml,descripcion,proxima){ 				
 			$("#id_vacuna").val(id);
-			$("#nombres").val(nombre); 
-			$("#vacunas").val(vacuna);
+			$("#nombre").val(nombre); 
+			$("#vacuna").val(vacuna);
             $("#ccml").val(ccml);
             $("#descripcions").val(descripcion);
-            $("#proxima1").val(proxima);
+            $("#proxima").val(proxima);
             
 		}	
         

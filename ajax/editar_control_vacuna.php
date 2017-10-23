@@ -21,16 +21,14 @@ $row = $result->fetch_assoc();
 	/*Inicia validacion del lado del servidor*/
 	if (empty($_POST['id_vacuna'])) {
            $errors[] = "id_vacuna vacío";
-        }else if (empty($_POST['nombres'])) {
+        }else if (empty($_POST['nombre'])) {
            $errors[] = "Nombre de la mascota vacío";         
-        }else if (empty($_POST['vacunas'])) {
+        }else if (empty($_POST['vacuna'])) {
            $errors[] = "Nombre de la vacuna vacío";
         } else if (empty($_POST['ccml'])) {
            $errors[] = "Cantidad de CC/ML aplicadas vacío";
         } else if (empty($_POST['descripcions'])) {
-           $errors[] = "Descripcion de la vacuna aplicada vacío";    
-        } else if (empty($_POST['proxima1'])) {
-           $errors[] = "la fecha de la proxima vacuna esta vacia";    
+           $errors[] = "Descripcion de la vacuna aplicada vacío";      
         } 
    
          else if (
@@ -40,17 +38,17 @@ $row = $result->fetch_assoc();
 		//Contiene funcion que conecta a la base de datos
 		// escaping, additionally removing everything that could be (html/javascript-) code
 		$id_vacuna=$_POST['id_vacuna'];
-		$nombre=$_POST['nombres'];
-		$vacuna=$_POST["vacunas"];
+		$nombre=$_POST['nombre'];
+		$vacuna=$_POST["vacuna"];
 		$ccml= $_POST["ccml"];
 		$descripcion=$_POST["descripcions"];
-		$proxima=$_POST["proxima1"];
+		$proxima=$_POST["proxima"];
 			  $objeto="tbl_vacunas";
                      $us="probando";
                     $accion="UPDATE";
          
             
-		$sql="UPDATE tbl_vacunas SET id_mascota='".$nombre."',id_tipovacuna='".$vacuna."',ccml='".$ccml."', descripcion='".$descripcion."',Proxima='".$proxima."' WHERE id_vacuna='".$id_vacuna."'";
+		$sql="UPDATE tbl_vacunas SET id_mascota='".$nombre."',id_tipovacuna='".$vacuna."',ccml='".$ccml."', descripcion_vac='".$descripcion."',Proxima='".$proxima."' WHERE id_vacuna='".$id_vacuna."'";
 		$query_update = mysqli_query($mysqli,$sql);
 		 $id= 1;
                       

@@ -54,7 +54,8 @@ require '../funcs/funcs.php';
 			    $nombre= strtoupper($nombre);
 				$apellido= strtoupper($apellido);
                 $direccion= strtoupper($direccion);
-
+                $mem= strtoupper($mem);
+                $celular= strtoupper($celular);
 		if (preg_match('/\w+@\w+\.+[a-z]/', $correo)){
          
             
@@ -65,7 +66,7 @@ require '../funcs/funcs.php';
 			if ($query_update){
 				 
 			 
-				$messages[] = "El usuario ha sido actualizado satisfactoriamente.";
+				$messages[] = "El registro ha sido actualizado satisfactoriamente.";
 			} else{
 				$errors []= "Lo siento algo ha salido mal intenta nuevamente.".mysqli_error($mysqli);
             }

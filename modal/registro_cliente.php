@@ -5,8 +5,13 @@
 	  <div  class="modal-dialog modal-lg" role="d class="modal-dialog modal-lg"t">
 		<div class="modal-content">
 		  <div class="modal-header">
+<<<<<<< HEAD
 			<button type="button" class="close" data-dismiss="modal" onClick="location.reload();" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar nuevo Cliente</h4>
+=======
+			<button onClick="location.reload();" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar nuevo cliente</h4>
+>>>>>>> master
 		   </div>
 		  <div class="modal-body">
 		 <form class="form-horizontal" method="post" id="guardar_usuario" name="guardar_usuario">
@@ -90,19 +95,7 @@
         }
     }
 </script>	
-	 
-	   <div class="form-group">
-				<label for="contrasena" class="col-sm-3 control-label">Genero</label>
-				 <div class="col-sm-8">
-		  		  <div class="input-group">
-		  		  
-		  		  
-		  		   <input type="radio" name="gender" value="male"> Male
-  <input type="radio" name="gender" value="female"> Female<br>
- 
-				</div>
-			  </div>
-			</div> 
+	
 		 
 			  <div class="form-group">
 			   <label for="celular" class="col-sm-3 control-label">Celular</label>
@@ -191,8 +184,13 @@
 		  <div><br><br> </div>
 		  <div><br><br> </div>
 		   <div class="modal-footer">
+<<<<<<< HEAD
 			<button title="Cerrar ventana" type="submit" onClick="location.reload();" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar Datos</button>
+=======
+			<button title="Cerrar ventana" type="submit"  class="btn btn-default" onClick="location.reload();" data-dismiss="modal">Cerrar</button>
+			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
+>>>>>>> master
 		  </div>
 		  </center>
 		  </form>

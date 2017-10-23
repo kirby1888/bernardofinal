@@ -27,7 +27,11 @@ $eliminacion=getPer('permiso_eliminacion',$rol,'2');
             <th>Mascota</th>
             <th>Prescripcion</th>
             <th>Fecha </th>
+<<<<<<< HEAD
             <th> Gestion Acciones</th>
+=======
+            <th>Gestion_Acciones</th>
+>>>>>>> master
           </tr>
         </thead>
         <tbody>

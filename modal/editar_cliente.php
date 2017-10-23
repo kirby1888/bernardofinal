@@ -127,18 +127,7 @@ function unosolo() {
 
 </script> 
 	 
-	   <div class="form-group">
-				<label for="contrasena" class="col-sm-3 control-label">Genero</label>
-				 <div class="col-sm-8">
-		  		  <div class="input-group">
-		  		  
-		  		  
-		  		   <input type="radio" name="gender" value="male"> Male
-  <input type="radio" name="gender" value="female"> Female<br>
- 
-				</div>
-			  </div>
-			</div> 
+	  
 		 
 			  <div class="form-group">
 			   <label for="celular" class="col-sm-3 control-label">Celular</label>
@@ -271,7 +260,7 @@ function unosolo() {
 		  <div><br><br> </div>
 		  <div><br><br> </div>
 		   <div class="modal-footer">
-			<button title="Cerrar ventana" type="submit"   class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button  onClick="location.reload();" title="Cerrar ventana" type="submit"   class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			<button title="Guardar Datos" type="submit" class="btn btn-primary" name="actualizar_datos" id="actualizar_datos">Guardar datos</button>
 		  </div>
 		  </center>

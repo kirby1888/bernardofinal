@@ -26,7 +26,7 @@ require '../funcs/funcs.php';
                     // if user has been added successfully
                     if ($query) {
 						
-                        $messages[] = "usuario ha sido eliminado con éxito.";
+                        $messages[] = "el registro ha sido eliminado con éxito.";
                     } else {
                         $errors[] = "Lo sentimos , el registro falló. Por favor, regrese y vuelva a intentarlo.";
                     }

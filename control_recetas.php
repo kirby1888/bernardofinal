@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require 'funcs/conexion.php';
 require 'funcs/funcs.php';
@@ -24,7 +25,7 @@ $consultar=getPer('permiso_consulta',$rol,'2');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>RECETAS</title>
+<title>Recetas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <meta name="keywords" content="Cat Club Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -66,7 +67,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 		<div class="about-heading">	
 			<div class="con">
-			RECETAS
+				RECETAS
+			
 		</div>
 	</div>
 	<!-- //banner -->
@@ -78,21 +80,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 		<div class="panel panel-success">
 		<div class="panel-heading">
-        <?php
-				if ($insertar==1 ){?>
+       
 		    <div class="btn-group pull-right">
-				<button type='button' class="btn btn-success" data-toggle="modal" data-target="#myModalpara"><span class="glyphicon glyphicon-plus" ></span> Nuevo parametro</button>
+				
 			</div>
-			<?php } ?>
-			 <?php
-				if ($consultar==1 ){?>
-			<h4><i class='glyphicon glyphicon-search'></i> Buscar parametros</h4>
-			<?php } ?>
+			
+		
+				
+			<h4><i class='glyphicon glyphicon-search'></i> Buscar Recetas</h4>
+			
 		</div>			
 			<div class="panel-body">
 			<?php
                 
-                include("modal/eliminar_rece-modal.php");
+               
 			    include("modal/editar_receta-modal.php");
                 
 			?>
@@ -103,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class='outer_div'></div><!-- Carga los datos ajax -->
 					<?php
                 
-                include("modal/eliminar_parametro.php");
+                include("modal/eliminar_rece-modal.php");
 			   
                 
 			?>
@@ -119,24 +120,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<footer>
 
 	</footer>
-  
-   <script type="text/javascript">
-	$('#myModal2').on('show.bs.modal', function (event) {
-	  var button = $(event.relatedTarget) // Button that triggered the modal
-	  var mod_id= button.data('mod_id')
-	  var parametro = button.data('parametro')
-	  var valor = button.data('valor') 
-	  var modal = $(this)
-      modal.find('.modal-body #mod_id').val(mod_idid)
-	  modal.find('.modal-body #parametro').val(parametro)
-	  modal.find('.modal-body #valor').val(valor)
-	 
-	  })
-</script>
-    
-    <script type="text/javascript" src="js/VentanaCentrada.js"></script>
 
-      
+    
+    <script type="text/javascript" src="js/parametros.js"></script>
 	<!-- footer -->
 	<!-- copyright -->
 	
@@ -155,20 +141,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script>
         
         
-        
-        		
-function reportePDF(id){
-	
-	window.open('reporte/recetapdf.php?id='+id);
-}
-
-        
-        
-        
-        
-        	function imprimir_factura(id){
-			VentanaCentrada('recetapdf.php?id='+id,'','1024','768','true');
-		}
 $( "#editar_password" ).submit(function( event ) {
   $('#actualizar_datos3').attr("disabled", true);
   
@@ -196,7 +168,7 @@ $( "#editar_usuario" ).submit(function( event ) {
  var parametros = $(this).serialize();
 	 $.ajax({
 			type: "POST",
-			url: "ajax/editar_receta.php",
+			url: "ajax/editar_parametro.php",
 			data: parametros,
 			 beforeSend: function(objeto){
 				$("#resultados_ajax2").html("Mensaje: Cargando...");
@@ -229,7 +201,11 @@ $( "#editar_usuario" ).submit(function( event ) {
 	});
   event.preventDefault();
 })
+	        		
+function reportePDF(id){
 	
+	window.open('reporte/recetapdf.php?id='+id);
+}
 		   	$(document).ready(function(){
 			load(1);
 		});

@@ -53,7 +53,7 @@ $events = $req->fetchAll();
 
 <div class="about-heading">	
 			<div class="con">
-			  CALENDARIO
+			  Calendario de Citas
 		</div>
 	</div>
     <!-- Navigation -->
@@ -88,7 +88,7 @@ $events = $req->fetchAll();
 			<div class="form-group">
 					<label for="title" class="col-sm-2 control-label">Asunto</label>
 					<div class="col-sm-10">
-					  <input type="text" name="title" class="form-control" id="title" placeholder="Title">
+					  <input type="text" name="Asunto" class="form-control" id="title" placeholder="Title">
 					</div>
 				  </div>
 				  <div class="form-group">

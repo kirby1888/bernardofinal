@@ -28,6 +28,14 @@
 		$stock=intval($_POST['mod_stock']);
 		$precio_venta=floatval($_POST['mod_precio']);
 		$id_producto=$_POST['mod_id'];
+        
+        
+        
+        $nombre= strtoupper($nombre);
+        $categoria= strtoupper($categoria);
+        $stock= strtoupper($stock);
+        $codigo= strtoupper($codigo);
+        
 		$sql="UPDATE products SET codigo_producto='".$codigo."', nombre_producto='".$nombre."', id_categoria='".$categoria."', precio_producto='".$precio_venta."', stock='".$stock."' WHERE id_producto='".$id_producto."'";
 		$query_update = mysqli_query($con,$sql);
 			if ($query_update){

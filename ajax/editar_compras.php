@@ -17,9 +17,7 @@ require '../funcs/funcs.php';
            $errors[] = "id_proveedor vacío";
         }else if (empty($_POST['des'])) {
            $errors[] = "descripcion vacío";         
-        }else if (empty($_POST['cantidad'])) {
-           $errors[] = "cantidad vacío";
-        } else if (empty($_POST['precio'])) {
+    } else if (empty($_POST['precio'])) {
            $errors[] = "precio vacío";
       
         
@@ -35,11 +33,12 @@ require '../funcs/funcs.php';
 		// escaping, additionally removing everything that could be (html/javascript-) code
 		$id=$_POST["id_compra"];
          $id_compra=$_POST["id_proveedor"];
-		$descripcion=$_POST["des"];
+		$descripcion=strtoupper($_POST["des"]);
 		$cantidad=$_POST["cantidad"];
 		$precio = $_POST["precio"];
 	
 		
+    			
             
 		$sql="UPDATE products SET codigo_producto='".$id_compra."',nombre_producto='".$descripcion."',cant='".$cantidad."', precio_producto='".$precio."' WHERE id_producto='".$id."'";
 		$query_update = mysqli_query($mysqli,$sql);
