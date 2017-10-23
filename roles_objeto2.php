@@ -217,15 +217,15 @@ luego verificamos la conexion,luego entramos a una codicion si numero de columna
 
 	<?php 
 
+$sql = "SELECT id_objeto, objeto FROM tbl_pantallas";
+$result = $conn->query($sql);
 
-    $sql = "SELECT id_rol, rol FROM tbl_roles";
-    $result = $conn->query($sql);
-    echo "<option selected = 'selected' disabled = 'disabled'> Elija un Rol</option>";
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-        //codigo generado por php
-            echo "<option value='".$row['id_rol']."'>".$row['rol']."</option>"; 
+if ($result->num_rows > 0) {
+    echo "<option selected = 'selected' disabled = 'disabled'> Elija una Pantalla</option>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+    //codigo generado por php
+        echo "<option value='".$row['id_objeto']."'>".$row['objeto']."</option>"; 
     }
 } 
 	?>
@@ -242,9 +242,65 @@ luego verificamos la conexion,luego entramos a una codicion si numero de columna
    </form> 
     
     
+   
+    <div class="dataTables_length" id="tableListar_length">
+     <table class="table" id="tableListar" width = "100%">
+     <thead>
+    <tr  class="success">
+         <th>Id</th>
+        <th>Rol</th>
+        <th>Objeto</th>
+        <th>Consulta</th>
+        <th>Inserción</th>
+        <th>Eliminación</th>
+        <th>Actualización</th>
+         <th>opciones</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <?php
+
+$sql = " SELECT tbl_roles_objeto.id_rol,tbl_roles_objeto.id_permiso ,tbl_roles.rol as nombre_rol, tbl_pantallas.id_objeto, tbl_pantallas.objeto as nombre_objeto, tbl_roles_objeto.permiso_consulta, tbl_roles_objeto.permiso_insercion,tbl_roles_objeto.permiso_eliminacion,tbl_roles_objeto.permiso_actualizacion FROM tbl_pantallas INNER JOIN tbl_roles  INNER JOIN tbl_roles_objeto  ON tbl_roles_objeto.id_rol = tbl_roles.id_rol AND tbl_roles_objeto.id_objeto = tbl_pantallas.id_objeto ORDER BY tbl_roles_objeto.id_objeto ";
+$result = $conn->query($sql);
+$num_fila = 0;
+while($row = $result->fetch_assoc()) {
+$num_fila = $num_fila + 1 ;
+$id= $row["id_permiso"];  
+$id_rol= $row["nombre_rol"];   
+$id_objeto = $row["nombre_objeto"];   
+$permiso_consulta = $row['permiso_consulta'];
+$permiso_insecion = $row['permiso_insercion'];
+$permiso_eliminacion = $row['permiso_eliminacion'];
+$permiso_actualizacion = $row['permiso_actualizacion'];
+
+
+
+        ?>
+        <tr  onclick='javascript:roles_objeto_seleccionado("<?php echo $id_rol; ?>","<?php echo $id_objeto; ?>","<?php echo $permiso_consulta; ?>","<?php echo $permiso_insercion; ?>","<?php echo $permiso_actualizacion; ?>","<?php echo $permiso_eliminacion; ?>");' >
+        <?php
+      echo "<td>".$row['id_permiso']."</td>";
+        echo "<td>".$row['nombre_rol']."</td>";
+        echo "<td>".$row['nombre_objeto']."</td>";
+        echo "<td>".$row['permiso_consulta']."</td>";
+        echo "<td>".$row['permiso_insercion']."</td>";
+        echo "<td>".$row['permiso_eliminacion']."</td>";
+        echo "<td>".$row['permiso_actualizacion']."</td>";
     
-   	<div id="resultados"></div><!-- Carga los datos ajax -->
-				<div class='outer_div'></div>
+      ?>
+    
+           <td>
+                        
+        <a href="#" class='btn btn-default' title='Editar Permiso'  data-toggle="modal" data-target="#myModal2" onclick='capturar("<?php echo $row['id_permiso'];?>","<?php echo $row['permiso_consulta'];?>","<?php echo $row['permiso_insercion'];?>","<?php echo $row['permiso_actualizacion'];?>","<?php echo $row['permiso_eliminacion'];?>" )' ><i class="glyphicon glyphicon-edit"></i></a>
+               
+               
+               
+             
+                  
+                  	 <a href="#" class='btn btn-default' title='Eliminar Permiso'    data-toggle="modal" data-target="#myModal4" onclick='capturar_eli("<?php echo $row['id_permiso'];?>" )' ><i class="glyphicon glyphicon-remove"></i></a> 
+            
+						
+               
                  
         	<?php
             
@@ -252,7 +308,22 @@ luego verificamos la conexion,luego entramos a una codicion si numero de columna
           include("modal/eliminar_permisos_modal.php");
                 
 			?>
-              
+             
+               
+               
+                </td>
+    
+    
+    <?php
+        echo "</tr>";
+    }
+  ?>
+             
+</tbody>
+</table>
+        
+        
+        
       
 
       
@@ -270,21 +341,7 @@ luego verificamos la conexion,luego entramos a una codicion si numero de columna
 
     <script src="js1/global.js"></script>
 <script>
-    function load(page){
-		
-			$("#loader").fadeIn('slow');
-			$.ajax({
-				url:'ajax/buscar_roles_objeto.php',
-				 beforeSend: function(objeto){
-				 $('#loader').html('<img src="./img/ajax-loader.gif"> Cargando...');
-			  },
-				success:function(data){
-					$(".outer_div").html(data).fadeIn('slow');
-					$('#loader').html('');
-					
-				}
-			})
-		}
+    
     
     
     
@@ -332,4 +389,4 @@ luego verificamos la conexion,luego entramos a una codicion si numero de columna
         </script>
 
 
-    
+        </div>
