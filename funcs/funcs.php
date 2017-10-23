@@ -439,6 +439,33 @@ function login($usuario, $password)
 		}
 	}
 
+
+
+function getCANTI($campo, $campoWhere, $valor)
+	{
+		global $mysqli;
+		
+		$stmt = $mysqli->prepare("SELECT $campo FROM transaccion_medicamentos WHERE $campoWhere = ? LIMIT 1");
+		$stmt->bind_param('s', $valor);
+		$stmt->execute();
+		$stmt->store_result();
+		$num = $stmt->num_rows;
+		
+		if ($num > 0)
+		{
+			$stmt->bind_result($_campo);
+			$stmt->fetch();
+			return $_campo;
+		}
+		else
+		{
+			return null;	
+		}
+	}
+
+
+
+
 function getMascota($campo, $campoWhere, $valor)
 	{
 		global $mysqli;
@@ -517,6 +544,25 @@ function getBitacora($campo, $campoWhere, $valor)
 
 
 
+	function entraSal($id)
+	{
+		global $mysqli;
+		
+		$stmt = $mysqli->prepare("SELECT tipo_transaccion FROM transaccion_medicamentos WHERE no= ?");
+		$stmt->bind_param('i', $id);
+		$stmt->execute();
+		$stmt->bind_result($_id);
+		$stmt->fetch();
+		
+		if ($_id == 'Entrada')
+		{
+			return true;
+		}
+		else
+		{
+			return null;	
+		}
+	}
 
 
 

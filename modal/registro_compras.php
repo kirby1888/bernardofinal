@@ -146,17 +146,46 @@ function unosolo() {
 				<div class="col-sm-8">
 			  	 <div class="input-group">
 			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-				  <input  type="text" class="form-control" style="text-transform: uppercase;" id="precio" name="precio" placeholder="Precio"   title="Precio" onkeyup="return noespacios1()" onkeypress="return solonumeros(event)" maxlength="20" autocomplete="off" required>
+				  <input  type="number" class="form-control" id="precio" name="precio" placeholder="PRECIO VENTA"   title="Precio" onkeyup="return noespacios3()"  maxlength="20" autocomplete="off" required>
+
+				</div> 
+			  </div>
+			  </div>
+    
+    
+    
+    
+    
+    
+    
+    
+			  <div class="form-group">
+			   <label for="precio" class="col-sm-3 control-label">Unidad</label>
+				<div class="col-sm-8">
+			  	 <div class="input-group">
+			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
+				  <input  type="text" class="form-control" style="text-transform: uppercase;" id="precio" name="unidad" placeholder="unidad"   title="unidad" onkeyup="return noespacios2()" maxlength="20" autocomplete="off" required>
 
 				</div> 
 			  </div>
 			  </div>
 			  <script>
-                function noespacios1(){
+                function noespacios3(){
 		              orig=document.guardar_usuario.precio.value;
 		              nuev=orig.split(' ');
 		              nuev=nuev.join('');
 		              document.guardar_usuario.precio.value=nuev;
+		              if(nuev=orig.split(' ').length>=2);
+	                   }
+                  
+                  
+                  
+                  
+                  function noespacios2(){
+		              orig=document.guardar_usuario.unidad.value;
+		              nuev=orig.split(' ');
+		              nuev=nuev.join('');
+		              document.guardar_usuario.unidad.value=nuev;
 		              if(nuev=orig.split(' ').length>=2);
 	                   }
                 </script>

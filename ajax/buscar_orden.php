@@ -1,4 +1,26 @@
-<?php  require '../funcs/conexion.php'; ?>
+
+<?php
+
+session_start();
+require '../funcs/conexion.php';
+require '../funcs/funcs.php';
+
+if(($_SESSION['id_usuario'])){
+ $idUsuario = $_SESSION['id_usuario'];
+    $rol = $_SESSION['id_rol'];
+  
+	$eliminar=getPer('permiso_eliminacion',$rol,'12');
+	$actualizar=getPer('permiso_actualizacion',$rol,'12');
+
+	
+	
+}else{
+	header ("Location: index.php");
+}
+
+
+?>
+     
      <link href="css1/bootstrap.min.css" rel="stylesheet">
     <link href="css1/datepicker3.css" rel="stylesheet">
     <link href="css1/dataTables.bootstrap.css" rel="stylesheet">
@@ -87,13 +109,14 @@
 
                 <td>
 
-
-
+    <?php
+			if ($eliminar==1){?>
                 
                   
                   <a href="#" class='btn btn-default' title='Eliminar Compra'  data-toggle="modal" data-target="#myModal4" onclick='capturar("<?php echo $num;?>" )' ><i class="glyphicon glyphicon-remove"></i></a> 
 
-
+ 
+                    <?php } ?>
 
                  
 

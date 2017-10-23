@@ -10,12 +10,12 @@ require '../funcs/funcs.php';
 				// escaping, additionally removing everything that could be (html/javascript-) code
               
 				$id_proveedor=$_POST["id_proveedor"];//codigo
-				$descripcion=$_POST["descripcion"];//nombre_producto				
+				$descripcion=strtoupper($_POST["descripcion"]);//nombre_producto				
                 $cantidad = $_POST["cantidad"];//cant				
 				$precio=$_POST["precio"];//precio_producto
+    			$unidad=strtoupper($_POST["unidad"]);
     			
-    			
-    ;
+
                
                
             
@@ -28,7 +28,7 @@ require '../funcs/funcs.php';
 					// write new user's data into database
 			
 					
-                    $consulta=("INSERT INTO products (codigo_producto, nombre_producto,precio_producto,cant,tipo) VALUES('$id_proveedor', '$descripcion', '$precio','$cantidad','1')");
+                    $consulta=("INSERT INTO products (codigo_producto, nombre_producto,precio_producto,cant,tipo,unidad) VALUES('$id_proveedor', '$descripcion', '$precio','$cantidad','1','$unidad')");
 					$resultado=mysqli_query($mysqli,$consulta) or die (mysqli_error($mysqli));
             
          
