@@ -68,15 +68,6 @@ if(mysqli_num_rows($query)>0){
                   <td><?php echo $fecha;?></td>
                 <td>
               
-                  <a href="?modulo=cliente&accion=eliminar&id=<?php echo $id;?>" data-toggle="tooltip" title="Eliminar cliente"><span class="glyphicon glyphicon-remove"></span></a>&nbsp;
-                  <a href="?modulo=mascota&accion=listar&idCliente=<?php echo $id;?>" data-toggle="tooltip" title="Listar mascotas"><span class="glyphicon glyphicon-list"></span></a>
-                  
-                  
-                  	<a href="#" class='btn btn-default' title='Editar parametro'  data-toggle="modal" data-target="#myModal2" onclick='obtener_datos("<?php echo $id;?>" , "<?php echo $nom ?>", "<?php echo $apellido ?>", "<?php echo $cel ?>","<?php echo $tel ?>","<?php echo $correo ?>","<?php echo $direccion ?>","<?php echo $membresia ?>")' ><i class="glyphicon glyphicon-edit"></i></a> 
-                  	
-            <a href="#" class='btn btn-default' title='Editar parametro'  data-toggle="modal" data-target="#myModal3" onclick='obtener_datos("<?php echo $cel;?>")' ><i class="glyphicon glyphicon-edit"></i></a> 
-                  	
-            
 						
                
                

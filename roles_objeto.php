@@ -216,15 +216,15 @@ luego verificamos la conexion,luego entramos a una codicion si numero de columna
 
 	<?php 
 
+$sql = "SELECT id_objeto, objeto FROM tbl_pantallas";
+$result = $conn->query($sql);
 
-    $sql = "SELECT id_rol, rol FROM tbl_roles";
-    $result = $conn->query($sql);
-    echo "<option selected = 'selected' disabled = 'disabled'> Elija un Rol</option>";
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-        //codigo generado por php
-            echo "<option value='".$row['id_rol']."'>".$row['rol']."</option>"; 
+if ($result->num_rows > 0) {
+    echo "<option selected = 'selected' disabled = 'disabled'> Elija una Pantalla</option>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+    //codigo generado por php
+        echo "<option value='".$row['id_objeto']."'>".$row['objeto']."</option>";
     }
 } 
 	?>

@@ -65,7 +65,7 @@ require '../funcs/funcs.php';
 			if ($query_update){
 				 
 			 
-				$messages[] = "El usuario ha sido actualizado satisfactoriamente.";
+				$messages[] = "El registrp ha sido actualizado satisfactoriamente.";
 			} else{
 				$errors []= "Lo siento algo ha salido mal intenta nuevamente.".mysqli_error($mysqli);
             }

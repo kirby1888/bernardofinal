@@ -271,7 +271,7 @@ function unosolo() {
 		  <div><br><br> </div>
 		  <div><br><br> </div>
 		   <div class="modal-footer">
-			<button title="Cerrar ventana" type="submit"   class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button  onClick="location.reload();" title="Cerrar ventana" type="submit"   class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			<button title="Guardar Datos" type="submit" class="btn btn-primary" name="actualizar_datos" id="actualizar_datos">Guardar datos</button>
 		  </div>
 		  </center>

@@ -7,7 +7,7 @@ $mascota=getMasco('nom_mascota','id_mascota',$id_mascota);
 
 
 if(!isset($_SESSION['mascota'])){
-    header ("Location: index.php");
+    header ("Location: consulta.php");
 }
     ?>
 <!DOCTYPE html>
@@ -170,7 +170,7 @@ if(!isset($_SESSION['mascota'])){
 
           <textarea name="txt_prescripcion"  onkeyup="return unespaciopres()" maxlength="600" class="prescripcion" id="txt_prescripcion" placeholder="PRESCRIPCION..."  rows=15 cols="100" style="backgroun;red; text-transform: uppercase;" ></textarea>
           <br><br> <br>
-             <input type="submit" class="" id="id_btn_guardar"  name="btn_guardar"  > 
+             <input type="submit" class="btn-success" id="id_btn_guardar"  name="btn_guardar"  > 
           <hr  width="28%">
           FIRMA Y SELLO
           <br>

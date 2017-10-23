@@ -50,7 +50,7 @@ $nombre=getMascota("nom_mascota","id_mascota",$id);
 
 <span class="glyphicon glyphicon-share"/>
 REGRESAR
-</button>
+
 </div>
 <h4>
 <span class="glyphicon glyphicon"/>
