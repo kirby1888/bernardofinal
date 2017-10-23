@@ -93,15 +93,31 @@
 				</div> 
 			  </div>
 			  </div>
-           <div class="form-group">
-			   <label for="id_proveedor" class="col-sm-3 control-label">Proveedor </label>
+        
+        
+        
+        
+        
+		  <div class="form-group">
+				<label for="id_proveedor" class="col-sm-3 control-label">Proveedor</label>
 				<div class="col-sm-6">
-			  	 <div class="input-group">
-			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-				  <input  type="" class="form-control" id="id_proveedor" name="id_proveedor" placeholder="Id-proveedor" title="Id del proveedor"onPaste="return false;"    autocomplete="off"  >
-				</div> 
+		  		<div class="input-group">
+			  	<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+				<select title="Cliente" class='form-control' id="id_proveedor" name="id_proveedor" style="text-transform: uppercase;" >
+				<?php 
+				$query_cod_veh=mysqli_query($mysqli,"SELECT id_proveedor,nom_empresa from tbl_proveedores");
+				while($rw=mysqli_fetch_array($query_cod_veh))	{
+					?>
+				<option value="<?php echo $rw['id_proveedor'];?>"><?php echo $rw['nom_empresa'];?></option>			
+					<?php
+				}
+
+				?>
+				</select>
+				</div>
 			  </div>
-			  </div>
+			 </div>
+          
 		      
 		  </center>
 		    <div class="form-group">
@@ -115,9 +131,9 @@
                 <label class="col-sm-3 control-label">Medicamento</label>
                 <div class="col-sm-6">
                   <select  class="form-control"  name="codigo" id="codigo" data-placeholder="-- Seleccionar Medicamento --" onchange="tampil_obat(this)" autocomplete="off" required>
-                    <option value=""></option>
+                    <option value="">SELECCIONE UN PRODUCTO</option>
                     <?php
-                      $query_obat = mysqli_query($mysqli, "SELECT codigo_producto, nombre_producto FROM products ORDER BY nombre_producto ASC") or die('error '.mysqli_error($mysqli));
+                      $query_obat = mysqli_query($mysqli, "SELECT codigo_producto, nombre_producto FROM products where tipo=1 ORDER BY nombre_producto ASC") or die('error '.mysqli_error($mysqli));
                       while ($data_obat = mysqli_fetch_assoc($query_obat)) {
                         echo"<option value=\"$data_obat[codigo_producto]\"> $data_obat[codigo_producto] | $data_obat[nombre_producto] </option>";
                       }

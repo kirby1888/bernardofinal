@@ -209,7 +209,7 @@ $( "#editar_password" ).submit(function( event ) {
  var parametros = $(this).serialize();
 	 $.ajax({
 			type: "POST",
-			url: "ajax/eliminatr_cliente.php",
+			url: "ajax/eliminar_cliente.php",
 			data: parametros,
 			 beforeSend: function(objeto){
 				$("#resultados_ajax3").html("Mensaje: Cargando...");

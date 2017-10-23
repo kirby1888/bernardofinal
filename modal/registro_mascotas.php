@@ -30,7 +30,7 @@ $consulta="select id_cliente, nom_mascota, especie, raza, sexo, nacimiento, desc
 				<div class="col-sm-8">
 		  		<div class="input-group">
 			  	<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-				<select title="Cliente" class='form-control' name='id_cliente' id='id_cliente' onchange="load(1);" style="text-transform: uppercase;" >
+				<select title="Cliente" class='form-control' name='id_cliente' id='id_cliente'  style="text-transform: uppercase;" >
 				<?php 
 				$query_cod_veh=mysqli_query($mysqli,"SELECT id_cliente, nom_cliente from tbl_clientes WHERE id_cliente <> 12");
 				while($rw=mysqli_fetch_array($query_cod_veh))	{

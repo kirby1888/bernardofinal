@@ -50,7 +50,7 @@ $row = $result->fetch_assoc();
 			if ($query_update){
 				  $bita=grabarBitacora($idUsuario,$objeto,$accion,$sql);
 			 
-				$messages[] = "El parametro ha sido actualizado satisfactoriamente.";
+				$messages[] = "El registro ha sido actualizado satisfactoriamente.";
 			} else{
 				$errors []= "Lo siento algo ha salido mal intenta nuevamente.".mysqli_error($mysqli);
 			}
