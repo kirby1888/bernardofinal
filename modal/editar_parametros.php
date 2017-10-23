@@ -4,7 +4,7 @@
 	  <div class="modal-dialog" role="document">
 		<div class="modal-content">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<button type="button" class="close" data-dismiss="modal"  onClick="location.reload();" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Editar Parametro</h4>
 		  </div>
 		  <div class="modal-body">
@@ -73,7 +73,7 @@ function unosolo() {
 			
 		  </div>
 		  <div class="modal-footer">
-			<button title="Cerrar Ventana" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button title="Cerrar Ventana" type="button" class="btn btn-default"  onClick="location.reload();"data-dismiss="modal">Cerrar</button>
 			<button title="Cerrar Ventana" type="submit" class="btn btn-primary"  id="actualizar_datos">Actualizar Datos</button>
 		  </div>
 		  </form>

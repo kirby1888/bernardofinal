@@ -5,7 +5,7 @@
 	  <div  class="modal-dialog modal-lg" role="d class="modal-dialog modal-lg"t">
 		<div class="modal-content">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<button type="button" class="close" onClick="location.reload();" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Editar Servicio</h4>
 		   </div>
 		  <div class="modal-body">
@@ -182,7 +182,7 @@
 		  <div><br><br> </div>
 		  <div><br><br> </div>
 		   <div class="modal-footer">
-			<button title="Cerrar ventana" type="submit" onClick="location.reload();"  class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button title="Cerrar ventana" onClick="location.reload();" type="submit" onClick="location.reload();"  class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			<button title="Guardar Datos" type="submit" class="btn btn-primary" name="actualizar_datos" id="actualizar_datos">Guardar datos</button>
 		  </div>
 		  </center>
