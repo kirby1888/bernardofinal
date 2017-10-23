@@ -31,7 +31,7 @@
 											<li><a class="hvr-bounce-to-bottom" href="cliente.php">Cliente</a></li>
 											<li><a class="hvr-bounce-to-bottom" href="mascota.php">Mascota</a></li>
                                              <li><a class="hvr-bounce-to-bottom" href="servicios.php">Servicios</a></li>
-                                             <li><a class="hvr-bounce-to-bottom" href="servicios2.php">Tipo Servicios</a></li>
+                                             <li><a class="hvr-bounce-to-bottom" href="tipo_sevicios.php">Tipo Servicios</a></li>
                                              <li><a class="hvr-bounce-to-bottom" href="parametros.php">Parametros</a></li>
 													</ul>
 												</li>											
@@ -52,7 +52,7 @@
                                             <li><a class="hvr-bounce-to-bottom" href="peluqueria.php">PETuqueria</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="vacunas.php">Vacunas</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="control_vacunas.php">Control Vacunas</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="historial.php">Historial Médico</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="control_consulta.php">Historial Médico</a></li>
 													</ul>
 												</li>
 
