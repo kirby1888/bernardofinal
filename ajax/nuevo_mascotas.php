@@ -34,6 +34,10 @@
 		
 		
        $mascota=strtoupper($mascota);
+        $especie=strtoupper($especie);
+        $raza=strtoupper($raza);
+        $sexo=strtoupper($sexo);
+        $descripcion=strtoupper($descripcion);
 		
 		
 		$sql="INSERT INTO tbl_mascotas (id_cliente,nom_mascota,especie,raza,sexo,nacimiento,descripcion) VALUES ('$cliente','$mascota','$especie','$raza','$sexo','$nacimiento','$descripcion')";
