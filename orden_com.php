@@ -262,7 +262,7 @@ $('#bd-desde').on('change', function(){
 function reportePDF(){
 	var desde = $('#bd-desde').val();
 	var hasta = $('#bd-hasta').val();
-	window.open('reporte/usuario.php?desde='+desde+'&hasta='+hasta);
+	window.open('reporte/compras.php?desde='+desde+'&hasta='+hasta);
 }
 
 
