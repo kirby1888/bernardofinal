@@ -46,8 +46,13 @@ require '../funcs/funcs.php';
 		
 		
  		  $id_mascota= strtoupper($id_mascota);
-          
-
+          $id_cliente= strtoupper($id_cliente);
+          $nom_mascota= strtoupper($nom_mascota);
+          $especie= strtoupper($especie);
+          $raza= strtoupper($raza);
+          $sexo= strtoupper($sexo);
+          $nacimiento= strtoupper($nacimiento);
+          $descripcion= strtoupper($descripcion);
 		
          
             
