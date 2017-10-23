@@ -13,7 +13,7 @@
 			<div class="form-group">	
             <label for="parametro" class="col-sm-3 control-label">Mascota</label>
 				<div class="col-sm-8">
-				  <input title="Nombre del Parametro" type="text" class="form-control" id="parametros" name="parametros" placeholder="parametro" style="text-transform: uppercase;" onkeypress="return soloLetras(event)"  maxlength="50"  onPaste="return false;" required readonly> 
+				  <input title="Nombre del Parametro" type="text" class="form-control" id="parametros" name="parametros" placeholder="parametro" style="text-transform: uppercase;" onkeyup="return unespacioparare()" onkeypress="return soloLetras(event)"  maxlength="50"  onPaste="return false;" required readonly> 
 				  <input  type="hidden" id="mod_id" name="mod_id">
 				</div>
 			  </div>
@@ -37,13 +37,42 @@
         }
     }
 </script>
+</script>
+ <script type="text/javascript">
+	function unespacioparare(){
+		orig=document.editar_usuario.parametros.value;
+		nuev=orig.split('  ');
+		nuev=nuev.join(' ');
+		document.editar_usuario.parametros.value=nuev;
+		if(nuev=orig.split(' ').length>=2);
+	}
+	
+function unosolo() {
+	while(parametros.value.match(/\s\s/)) parametros.value = parametros.value.replace('  ', ' ');
+}
+</script>
 
 			  <div class="form-group">
 				<label for="valor" class="col-sm-3 control-label">Rx :</label>
 				<div class="col-sm-8">
-                    <textarea type="text" class="form-control" id="valors" name="valors" placeholder="valor" rows=15 cols="10" maxlength="100" required title="Valor del Parametro"></textarea>
+                    <textarea type="text" class="form-control" id="valors" name="valors" placeholder="valor" rows=15 cols="10" maxlength="100" style="text-transform: uppercase;" onkeyup="return unespaciorx()" required title="Valor del Parametro"></textarea>
 				</div>
 			  </div>
+ <script type="text/javascript">
+	function unespaciorx(){
+		orig=document.editar_usuario.valors.value;
+		nuev=orig.split('  ');
+		nuev=nuev.join(' ');
+		document.editar_usuario.valors.value=nuev;
+		if(nuev=orig.split(' ').length>=2);
+	}
+	
+function unosolo() {
+	while(valors.value.match(/\s\s/)) valors.value = valors.value.replace('  ', ' ');
+}
+</script>
+			  
+			  
 	
 						 	 
 			
