@@ -93,48 +93,29 @@
 				</div> 
 			  </div>
 			  </div>
-          
-          
-          <div class="form-group">
-				<label for="id_proveedor" class="col-sm-3 control-label">Proveedor</label>
+           <div class="form-group">
+			   <label for="id_proveedor" class="col-sm-3 control-label">Proveedor </label>
 				<div class="col-sm-6">
-		  		<div class="input-group">
-			  	<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-				<select title="Proveedor" style="text-transform: uppercase;" class='form-control' name='id_proveedor' id='id_proveedor' onchange="load(1);" style="text-transform: uppercase;" >
-				<option value="">-- Proveedores --</option>
-				<?php 
-				$query_cod_veh=mysqli_query($mysqli,"SELECT id_proveedor, nom_empresa from tbl_proveedores WHERE id_proveedor <> 12");
-				while($rw=mysqli_fetch_array($query_cod_veh))	{
-					?>
-				<option value="<?php echo $rw['id_proveedor'];?>"><?php echo $rw['nom_empresa'];?></option>			
-					<?php
-				}
-
-				?>
-				</select>
-				</div>
+			  	 <div class="input-group">
+			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
+				  <input  type="" class="form-control" id="id_proveedor" name="id_proveedor" placeholder="Id-proveedor" title="Id del proveedor"onPaste="return false;"    autocomplete="off"  >
+				</div> 
 			  </div>
-			 </div>          
-          
-           
+			  </div>
+		      
 		  </center>
 		    <div class="form-group">
                 <label class="col-sm-3 control-label">Fecha</label>
                 <div class="col-sm-6">
-                 <div class="input-group">
-			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                  <input type="date" style="text-transform: uppercase;" class="form-control date-picker" data-date-format="dd-mm-aaaa" name="fecha" id="fecha" autocomplete="off" value="<?php echo date("dd-mm-aaaa"); ?>" required>
+                  <input type="date" class="form-control date-picker" data-date-format="dd-mm-aaaa" name="fecha" id="fecha" autocomplete="off" value="<?php echo date("dd-mm-aaaa"); ?>" required>
                 </div>
               </div>
-              </div>
     
-              <div class="form-group">  
+      <div class="form-group">  
                 <label class="col-sm-3 control-label">Medicamento</label>
-                <div class="col-sm-6">                
-                 <div class="input-group">
-			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                  <select  class="form-control" style="text-transform: uppercase;"  name="codigo" id="codigo" data-placeholder="-- Seleccionar Medicamento --" onchange="tampil_obat(this)" autocomplete="off" required>
-                    <option value="">-- Seleccionar Medicamento --</option>
+                <div class="col-sm-6">
+                  <select  class="form-control"  name="codigo" id="codigo" data-placeholder="-- Seleccionar Medicamento --" onchange="tampil_obat(this)" autocomplete="off" required>
+                    <option value=""></option>
                     <?php
                       $query_obat = mysqli_query($mysqli, "SELECT codigo_producto, nombre_producto FROM products ORDER BY nombre_producto ASC") or die('error '.mysqli_error($mysqli));
                       while ($data_obat = mysqli_fetch_assoc($query_obat)) {
@@ -144,88 +125,38 @@
                   </select>
                 </div>
               </div>
-              </div>
-              
-              
-             <span id='stok'>
+     <span id='stok'>
               <div class="form-group">
                 <label class="col-sm-3 control-label">Stock</label>
                 <div class="col-sm-6">
-                 <div class="input-group">
-			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                  <input type="text" style="text-transform: uppercase;" class="form-control" id="stok" name="stock" readonly required placeholder="Stock">
+                  <input type="text" class="form-control" id="stok" name="stock" readonly required>
                 </div>
               </div>
               </span>
-              </div>
     
-              <div class="form-group">
+      <div class="form-group">
                 <label class="col-sm-3 control-label">Cantidad</label>
-                  <div class="col-sm-6">
-                   <div class="input-group">
-			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                  <input type="text" style="text-transform: uppercase;" class="form-control" id="jumlah_masuk" placeholder="Cantidad" name="num" autocomplete="off" onkeypress="return solonumeros(event)" onkeyup="return noespacioscan()" onkeyup="hitung_total_stok(this)&cek_jumlah_masuk(this)" required>
-                  
-                  <!-------------------onKeyPress="return goodchars(event,'0123456789',this)"--------------->
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="jumlah_masuk" name="num" autocomplete="off" onKeyPress="return goodchars(event,'0123456789',this)" onkeyup="hitung_total_stok(this)&cek_jumlah_masuk(this)" required>
                 </div>
-                </div>
-                </div>
-                <script type="text/javascript">                
-                      function noespacioscan(){
-		              orig=document.guardar_usuario.num.value;
-		              nuev=orig.split(' ');
-		              nuev=nuev.join('');
-		              document.guardar_usuario.num.value=nuev;
-		              if(nuev=orig.split(' ').length>=2);
-	                   }
-                    
-                    
-                        function solonumeros(e){
-                            key = e.keyCode || e.which;
-                            tecla = String.fromCharCode(key).toLowerCase();
-                            letras = " 1234567890";
-                            especiales = "8-37-39-46";
-
-                            tecla_especial = false
-                            for(var i in especiales){
-                                if(key == especiales[i]){
-                                    tecla_especial = true;
-                                    break;
-                                }
-                            }
-
-                            if(letras.indexOf(tecla)==-1 && !tecla_especial){
-                                return false;
-                            }
-                        }
-      
-                </script>
-              
-             
-              
+              </div>
 			  
 			  <div class="form-group">
                 <label class="col-sm-3 control-label">Transacción</label>
                 <div class="col-sm-6">
-                 <div class="input-group">
-			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                  <select name="transaccion" style="text-transform: uppercase;" id="transaccion" required class='form-control' onchange="hitung_total_stok();">
+                  <select name="transaccion" id="transaccion" required class='form-control' onchange="hitung_total_stok();">
                       	<option value="Entrada">Entrada</option>
 					<option value="Salida">Salida</option>
 				
 				  </select>
                 </div>
               </div>
-              </div>
 
               <div class="form-group">
                 <label class="col-sm-3 control-label">Total Stock</label>
                 <div class="col-sm-6">
-                 <div class="input-group">
-			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                  <input type="text"  style="text-transform: uppercase;" class="form-control" id="total_stok" name="total_stock" readonly required placeholder="total stock">
+                  <input type="text" class="form-control" id="total_stok" name="total_stock" readonly required>
                 </div>
-              </div>
               </div>
 			
 
@@ -260,21 +191,12 @@
 				<div class="col-sm-6">
 			  	 <div class="input-group">
 			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-				  <input  type="text" style="text-transform: uppercase;" class="form-control" id="precio" name="precio" placeholder="Precio"   title="Precio" onkeypress="return solonumeros(event)" onkeyup="return noespaciospre()" maxlength="20" autocomplete="off" required>
+				  <input  type="text" class="form-control" id="precio" name="precio" placeholder="Precio"   title="Precio" maxlength="20" autocomplete="off" required>
 
 				</div> 
 			  </div>
 			  </div>
-			 <script type="text/javascript">                
-                      function noespaciospre(){
-		              orig=document.guardar_usuario.precio.value;
-		              nuev=orig.split(' ');
-		              nuev=nuev.join('');
-		              document.guardar_usuario.precio.value=nuev;
-		              if(nuev=orig.split(' ').length>=2);
-	                   }
-      
-            </script>
+			 
 			 
 
 			 
