@@ -226,7 +226,7 @@ $( "#editar_password" ).submit(function( event ) {
 $('#bd-desde').on('change', function(){
 		var desde = $('#bd-desde').val();
 		var hasta = $('#bd-hasta').val();
-		var url = 'ajax/buscar_usuario_fecha.php';
+		var url = 'ajax/buscar_orden_fecha.php';
 		$.ajax({
 		type:'POST',
 		url:url,
@@ -244,7 +244,7 @@ $('#bd-desde').on('change', function(){
 	  $('#bd-hasta').on('change', function(){
 		var desde = $('#bd-desde').val();
 		var hasta = $('#bd-hasta').val();
-		var url = 'ajax/buscar_usuario_fecha.php';
+		var url = 'ajax/buscar_orden_fecha.php';
 		$.ajax({
 		type:'POST',
 		url:url,
