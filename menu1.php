@@ -21,7 +21,7 @@
 											<li><a class="hvr-bounce-to-bottom" href="cliente.php">Cliente</a></li>
 											<li><a class="hvr-bounce-to-bottom" href="mascota.php">Mascota</a></li>
                                              <li><a class="hvr-bounce-to-bottom" href="servicios.php">Servicios</a></li>
-                                             <li><a class="hvr-bounce-to-bottom" href="servicios2.php">Tipo Servicios</a></li>
+                                             <li><a class="hvr-bounce-to-bottom" href="tipo_servicios.php">Tipo Servicios</a></li>
                                              <li><a class="hvr-bounce-to-bottom" href="parametros.php">Parametros</a></li>
 													</ul>
 												</li>
