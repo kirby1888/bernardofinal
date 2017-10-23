@@ -12,14 +12,14 @@ $consulta="select id_tipo, nombre from tbl_tiposervicios";
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar nuevo servicio</h4>
+			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar Nuevo Servicio</h4>
 		   </div>
 		  <div class="modal-body">
 		 <form class="form-horizontal" method="post" id="guardar_usuario" name="guardar_usuario">
 		<div id="resultados_ajax"></div>
 		
            <div class="form-group">
-				<label for="mod_tipo" class="col-sm-3 control-label">Tipo de servicio</label>
+				<label for="mod_tipo" class="col-sm-3 control-label">Tipo de Servicio</label>
 				<div class="col-sm-8">
 		  		<div class="input-group">
 			  	<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
@@ -105,8 +105,8 @@ $consulta="select id_tipo, nombre from tbl_tiposervicios";
               
               
 		  <div class="modal-footer">
-			<button title="Cerrar ventana" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
+			<button title="Cerrar ventana" type="button" onClick="location.reload();" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar Datos</button>
 		  </div>
 		  </form>
 		</div>

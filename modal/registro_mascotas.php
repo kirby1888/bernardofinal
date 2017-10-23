@@ -10,7 +10,7 @@ $consulta="select id_cliente, nom_mascota, especie, raza, sexo, nacimiento, desc
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
 	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" onClick="location.reload();" aria-labelledby="myModalLabel">
 	  <div  class="modal-dialog modal-lg" role="d class="modal-dialog modal-lg"t">
 		<div class="modal-content">
 		  <div class="modal-header">
@@ -207,8 +207,8 @@ function unosolo() {
 		  <div><br><br> </div>
 		  <div><br><br> </div>
 		   <div class="modal-footer">
-			<button title="Cerrar ventana" type="submit"  class="btn btn-default" data-dismiss="modal";" >Cerrar</button>
-			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
+			<button title="Cerrar ventana" type="submit"  class="btn btn-default" onClick="location.reload();" data-dismiss="modal";" >Cerrar</button>
+			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar Datos</button>
 		  </div>
 		  </center>
 		  </form>

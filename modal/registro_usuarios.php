@@ -62,8 +62,8 @@ $consulta="select id_rol, rol from tbl_roles";
 	  <div class="modal-dialog" role="document">
 		<div class="modal-content">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar nuevo usuario</h4>
+			<button type="button" class="close" data-dismiss="modal" onClick="location.reload();" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar Nuevo Usuario</h4>
 		   </div>
 		  <div class="modal-body">
 		 <form class="form-horizontal" method="post" id="guardar_usuario" name="form" onsubmit="return validar();">
@@ -305,8 +305,8 @@ function unosolo() {
               
               
 		  <div class="modal-footer">
-			<button title="Cerrar ventana" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
+			<button title="Cerrar ventana" type="button" onClick="location.reload();" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar Datos</button>
 		  </div>
 		  </form>
 		</div>

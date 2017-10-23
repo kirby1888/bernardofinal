@@ -29,8 +29,8 @@ require 'funcs/conexion.php';
 	  <div  class="modal-dialog modal-lg" role="d class="modal-dialog modal-lg"t">
 		<div class="modal-content">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar nuevo producto</h4>
+			<button type="button" class="close" data-dismiss="modal" onClick="location.reload();" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar Nuevo Producto</h4>
 		   </div>
 		  <div class="modal-body">
 		  
@@ -194,8 +194,8 @@ function unosolo() {
             
 
 		   <div class="modal-footer">
-			<button title="Cerrar ventana" type="submit" onClick="location.reload();"  class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
+			<button title="Cerrar ventana" type="submit" onClick="location.reload();" onClick="location.reload();" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar Datos</button>
 		  </div>
 		  </center>
 		  </form>

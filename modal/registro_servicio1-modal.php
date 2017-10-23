@@ -1,12 +1,12 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
 	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" onClick="location.reload();" aria-labelledby="myModalLabel">
 	  <div  class="modal-dialog modal-lg" role="d class="modal-dialog modal-lg"t">
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar nuevo servicio</h4>
+			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Agregar Nuevo Servicio</h4>
 		   </div>
 		  <div class="modal-body">
 		 <form class="form-horizontal" method="post" id="guardar_usuario" name="guardar_usuario">
@@ -79,8 +79,8 @@
             
 
 		   <div class="modal-footer">
-			<button title="Cerrar ventana" type="submit" onClick="location.reload();"  class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar datos</button>
+			<button title="Cerrar ventana" type="submit" onClick="location.reload();" onClick="location.reload();" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			<button title="Guardar Datos" type="submit" class="btn btn-primary" id="guardar_datos">Guardar Datos</button>
 		  </div>
 		  </center>
 		  </form>
