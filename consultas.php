@@ -92,8 +92,8 @@ $nombre=getNum();
 			                     <div class='form-group'>
             <label class='control-label col-md-2 col-md-offset-2' for='id_accomodation'>Mascota</label>
             <div class='col-md-8'>
-              <div class='col-md-6'>
-                <select  class="myselect" style="text-transform: uppercase;" id="masco" name="masco"  style="width:300px">
+              <div class='col-md-8'>
+                <select  class="myselect" style="text-transform: uppercase;" id="masco" name="masco"  style="width:80%">
                 <?php 
 				$query_cod_veh=mysqli_query($mysqli,"SELECT id_mascota,nom_mascota from tbl_mascotas");
 				while($rw=mysqli_fetch_array($query_cod_veh))	{
@@ -109,7 +109,7 @@ $nombre=getNum();
               </div>
               <div class='col-md-3 indent-small'>
                 <div class='form-group internal'>
-                  <input class='form-control' id='fecha'  style="text-transform: uppercase;" name='fecha' placeholder='First Name' type='date'>
+                  <input class='form-control' id='fecha'  style="text-transform: uppercase;" name='fecha' placeholder='' type='date'>
                 </div>
               </div>
            

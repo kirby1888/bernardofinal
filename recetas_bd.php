@@ -101,7 +101,7 @@ swal({
         function(isConfirm) {
             if (isConfirm) {
               setTimeout(function(){
-						location.href="control_rece.php";
+						location.href="control_recetas.php";
 					},2000);
             } 
         });
