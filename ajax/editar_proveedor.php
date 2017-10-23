@@ -49,7 +49,9 @@ require '../funcs/funcs.php';
 
 			 
 			        $nom_empresa= strtoupper($nom_empresa);
-				$representante= strtoupper($representante);
+				    $representante= strtoupper($representante);
+                    $tipo= strtoupper($tipo);
+				    $RTN= strtoupper($RTN);
 
 		 if (preg_match('/\w+@\w+\.+[a-z]/', $cor_empresa)){
          
