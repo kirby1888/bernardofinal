@@ -48,12 +48,12 @@ $eliminacion=getPer('permiso_eliminacion',$rol,'11');
 			
         while ($row=mysqli_fetch_array($query)){
 			            $id_vacuna=$row['id_vacuna'];
-			            $id_tipovacuna=$row['id_tipovacuna'];
-                        $nombre=$row['nombre'];
-                        $id_mascota=$row['id_mascota'];
+			            $id_mascota=$row['id_mascota'];
                         $nom_mascota=$row['nom_mascota'];
+                        $id_tipovacuna=$row['id_tipovacuna'];
+                        $nombre=$row['nombre'];
 						$ccml=$row['ccml'];
-			            $descripcion=$row['descripcion'];
+			            $descripcion=$row['descripcion_vac'];
 						$aplicada=$row['aplicada'];
                         $aplicada= date('d/m/Y', strtotime($aplicada));
 				        $proxima=$row['proxima'];
@@ -63,9 +63,9 @@ $eliminacion=getPer('permiso_eliminacion',$rol,'11');
           ?>
                       
               <tr>
-              <td><?php echo $id_vacuna; ?></td>
-                <td><?php echo $nombre; ?></td>
+             <td><?php echo $id_vacuna; ?></td>      
                 <td><?php echo $nom_mascota;?></td>
+                <td><?php echo $nombre; ?></td>
                 <td><?php echo $ccml; ?></td>
                 <td><?php echo $descripcion;?></td>
                 <td><?php echo $aplicada;?></td>
@@ -74,7 +74,7 @@ $eliminacion=getPer('permiso_eliminacion',$rol,'11');
                 <td>
                       <?php
 				if ($actualizacion==1 ){?>
-                  <a href="#" class='btn btn-default' title='Editar control de vacuna'  data-toggle="modal" data-target="#myModal2" onclick='obtener_datos("<?php echo $id_vacuna;?>" , "<?php echo $nombre ;?>", "<?php echo $nom_mascota; ?>","<?php echo $ccml; ?>","<?php echo $descripcion; ?>","<?php echo $proxima; ?>")' ><i class="glyphicon glyphicon-edit"></i></a>
+                  <a href="#" class='btn btn-default' title='Editar control de vacuna'  data-toggle="modal" data-target="#myModal2" onclick='obtener_datos("<?php echo $id_vacuna;?>" , "<?php echo $id_mascota ;?>", "<?php echo $id_tipovacuna; ?>","<?php echo $ccml; ?>","<?php echo $descripcion; ?>","<?php echo $proxima; ?>")' ><i class="glyphicon glyphicon-edit"></i></a>
                   <?php } ?>
                       
                    <?php

@@ -12,9 +12,9 @@
 			<div id="resultados_ajax2"></div>
 			
 			 <div class="form-group">
-				<label for="nombres" class="col-sm-3 control-label">Nombre de la mascota</label>
+				<label for="nombre" class="col-sm-3 control-label">Nombre de la mascota</label>
 				<div class="col-sm-8">
-				  <select class='form-control' name='nombres' id='nombres' onchange="load(1);">
+				  <select class='form-control' name='nombre' id='nombre' onchange="load(1);">
 							<option value="">Seleccione una mascota</option>
 							<?php 
 							$query_cod_veh=mysqli_query($mysqli,"select * from tbl_mascotas order by id_mascota");
@@ -32,9 +32,9 @@
 			  
 			  
 			   <div class="form-group">
-				<label for="vacunas" class="col-sm-3 control-label">Vacuna a aplicar</label>
+				<label for="vacuna" class="col-sm-3 control-label">Vacuna a aplicar</label>
 				<div class="col-sm-8">
-				  <select class='form-control' name='vacunas' id='vacunas'  placeholder="Nombre de la vacuna aplicada "onchange="load(1);">
+				  <select class='form-control' name='vacuna' id='vacuna'  placeholder="Nombre de la vacuna aplicada "onchange="load(1);">
 							<option value="">Seleccione la vacuna a aplicar</option>
 							<?php 
 							$query_cod_veh=mysqli_query($mysqli,"select * from tbl_tipvacunas order by id_tipovacuna");
@@ -67,11 +67,11 @@
 			  </div>
 			  		  
 			   <div class="form-group">
-			   <label for="fecha_registro" class="col-sm-3 control-label">Proxima vacuna </label>
+			   <label for="proxima" class="col-sm-3 control-label">Proxima vacuna </label>
 				<div class="col-sm-8">
 			  	 <div class="input-group">
 			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-				  <input  type="date" class="form-control" id="proxima1" name="proxima1" placeholder="Fecha proxima vacuna"   title="Fecha de Registro" maxlength="20" autocomplete="off" required>
+				  <input  type="date" class="form-control" id="proxima" name="proxima" placeholder="Fecha proxima vacuna"   title="Fecha de Registro" maxlength="20" autocomplete="off">
 				</div> 
 			  </div>
 			  </div>
