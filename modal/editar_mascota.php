@@ -5,7 +5,7 @@
 	  <div  class="modal-dialog modal-lg" role="d class="modal-dialog modal-lg"t">
 		<div class="modal-content">
 		  <div class="modal-header">
-			<button type="button"  onClick="location.reload();" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Editar Mascota</h4>
 		   </div>
 		  <div class="modal-body">
@@ -64,14 +64,18 @@
 			  
 
 			  <div class="form-group">
-			   <label for="especie" class="col-sm-3 control-label">Especie</label>
-				<div class="col-sm-8">
-			  	 <div class="input-group">
-			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-				  <input  type="text" class="form-control" style="text-transform: uppercase;"  id="especie" name="especie" placeholder="Especie" title="Especie" maxlength="50" onkeyup="return unespacio6()" onkeypress="return soloLetras(event)" autocomplete="off">
-				</div> 
-			  </div>
-			  </div>
+					<label for="especie" class="col-sm-3 control-label">Especie</label>
+					<div class="col-sm-8">
+                     <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+					  <select name="especie" id= "especie" class="form-control" style="text-transform: uppercase;">						  
+						  <option value="Canino">Canino</option>						  
+						  <option value="Felino">Felino</option>						  
+						  <option value="Otros">Otros</option>				  
+						</select>
+					</div>
+				  </div>
+                </div>
 <script>
     	function unespacio6(){
 		orig=document.editar_usuario.especie.value;
@@ -123,14 +127,17 @@ function unosolo() {
 			 	<div class="agileinfo-row w3ls-row2"> 
 			 
 			<div class="form-group">
-			   <label for="sexo" class="col-sm-3 control-label">Sexo </label>
-				<div class="col-sm-8">
-			  	 <div class="input-group">
-			  	  <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-				  <input  type="text" class="form-control" style="text-transform: uppercase;"  id="sexo" name="sexo" placeholder="Sexo"   title="Sexo" onkeyup="return unespacio3()" onkeypress="return soloLetras(event)" maxlength="50" autocomplete="off" required>
-				</div> 
-			  </div>
-			  </div>
+				<label for="sexo" class="col-sm-3 control-label">Sexo</label>
+				  <div class="col-sm-8">
+					<div class="input-group">
+			  	      <span class="input-group-addon"><i class="glyphicon glyphicon-list "></i></span>
+					   <select name="sexo" id= "sexo" class="form-control" style="text-transform: uppercase;">						  
+						  <option value="Macho">Macho</option>						  
+						  <option value="Hembra">Hembra</option>				  
+						</select>
+					</div>
+				  </div>
+                </div>
                    
      <script>
     	function unespacio3(){

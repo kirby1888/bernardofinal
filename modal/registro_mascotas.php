@@ -31,6 +31,7 @@ $consulta="select id_cliente, nom_mascota, especie, raza, sexo, nacimiento, desc
 		  		<div class="input-group">
 			  	<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
 				<select title="Cliente" class='form-control' name='id_cliente' id='id_cliente'  style="text-transform: uppercase;" >
+				<option value="">--SELECCIONE UN CLIENTE--</option>
 				<?php 
 				$query_cod_veh=mysqli_query($mysqli,"SELECT id_cliente, nom_cliente from tbl_clientes WHERE id_cliente <> 12");
 				while($rw=mysqli_fetch_array($query_cod_veh))	{
@@ -100,7 +101,7 @@ function unosolo() {
 					<div class="col-sm-8">
                      <div class="input-group">
                       <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-					  <select name="especie" id= "especie" class="form-control" style="text-transform: uppercase;">						  
+					  <select name="especie" id= "especie" class="form-control" style="text-transform: uppercase;">			<option value="">--SELECCIONE ESPECIE--</option>			  
 						  <option value="Canino">Canino</option>						  
 						  <option value="Felino">Felino</option>						  
 						  <option value="Otros">Otros</option>				  
@@ -142,7 +143,7 @@ function unosolo() {
 				  <div class="col-sm-8">
 					<div class="input-group">
 			  	      <span class="input-group-addon"><i class="glyphicon glyphicon-list "></i></span>
-					   <select name="sexo" id= "sexo" class="form-control" style="text-transform: uppercase;">						  
+					   <select name="sexo" id= "sexo" class="form-control" style="text-transform: uppercase;">			      <option value="">--SELECCIONE sexo--</option>		  
 						  <option value="Macho">Macho</option>						  
 						  <option value="Hembra">Hembra</option>				  
 						</select>
