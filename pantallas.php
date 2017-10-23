@@ -12,8 +12,8 @@ $idUsuario = $_SESSION['id_usuario'];
 $sql = "Select id_usuario, nombre_usuario from tbl_usuario WHERE id_usuario = '$idUsuario'";
 $result = $mysqli->query($sql);
 $row = $result->fetch_assoc();
-$insertar=getPer('permiso_insercion',$rol,'7');
-$consultar=getPer('permiso_consulta',$rol,'7');
+$insertar=getPer('permiso_insercion',$rol,'9');
+$consultar=getPer('permiso_consulta',$rol,'9');
 ?>
 
 <!DOCTYPE html>
