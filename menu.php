@@ -53,6 +53,8 @@
                                             <li><a class="hvr-bounce-to-bottom" href="vacunas.php">Vacunas</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="control_vacunas.php">Control Vacunas</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="control_consulta.php">Historial Médico</a></li>
+                                                <li><a class="hvr-bounce-to-bottom" href="control_rece.php">Recetas</a></li>                
+                                                        
 													</ul>
 												</li>
 
