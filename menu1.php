@@ -39,7 +39,7 @@
 													<ul class="dropdown-menu">
 											<li><a class="hvr-bounce-to-bottom" href="calendar.php">Calendario</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="consultas.php">Consultas</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="peluqueria.php">PETuqueria</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="atenciones.php">PETuqueria</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="vacunas.php">Vacunas</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="control_vacunas.php">Control Vacunas</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="historial.php">Historial Médico</a></li>

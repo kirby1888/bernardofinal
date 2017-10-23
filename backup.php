@@ -113,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<INPUT type="submit"   type="submit" value="Cargar Backup" >
 	
           
-            <p>Espere mientras se realiza la copia</p>
+            <p>Espere mientras se restaura la copia.</p>
             
             
             
